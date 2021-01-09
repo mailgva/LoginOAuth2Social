@@ -18,5 +18,4 @@ public class JsonController {
         return principal;
     }
 
-    //SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 }

@@ -10,4 +10,5 @@ public class WebController {
     public String root(Authentication authentication) {
         return "/welcome";
     }
+
 }
