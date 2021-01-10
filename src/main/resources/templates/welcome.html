@@ -12,12 +12,15 @@
 </head>
 <body>
 <div class="container">
-    <h2 th:inline="text">Welcome, "[[${#httpServletRequest.remoteUser}]]"</h2>
+    <!--<h2 th:inline="text">Welcome, "[[${#httpServletRequest.remoteUser}]]"</h2>-->
+    <h2 th:text="${'Welcome, ' + name}"></h2>
+    <h2 th:text="${'Your email: ' + email}"></h2>
+    <!--<hr>
     <h2 th:text="${#authentication.name}"></h2>
     <div sec:authorize="isAuthenticated()">
         Logged user: <b><span sec:authentication="name"></span></b> |
         Roles: <b><span sec:authentication="principal.authorities"></span></b>
-    </div>
+    </div>-->
 
     <form class="form-signin" th:action="@{/logout}" method="post">
         <input class="btn btn-lg btn-primary btn-block" type="submit" value="LOGOUT"/>

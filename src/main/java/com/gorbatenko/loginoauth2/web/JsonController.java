@@ -8,6 +8,7 @@ import java.security.Principal;
 
 @RestController
 public class JsonController {
+
     @GetMapping("/jsona")
     public Authentication authentication(Authentication authentication) {
         return authentication;
@@ -17,5 +18,7 @@ public class JsonController {
     public Principal authentication(Principal principal) {
         return principal;
     }
+
+
 
 }
