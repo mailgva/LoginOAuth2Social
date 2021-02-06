@@ -24,6 +24,11 @@ public class WebController {
     @Autowired
     private OAuth2AuthorizedClientService clientService;
 
+    @GetMapping("/login")
+    public String login() {
+        return "/login";
+    }
+
     @GetMapping("/")
     public String root(OAuth2AuthenticationToken authenticationToken, Model model) {
         String name = authenticationToken.getPrincipal().getAttribute("name");

@@ -6,25 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Signed in</title>
+    <title>Please sign in</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
 </head>
 <body>
 <div class="container">
-    <!--<h2 th:inline="text">Welcome, "[[${#httpServletRequest.remoteUser}]]"</h2>-->
-    <h2 th:text="${'Welcome, ' + name}"></h2>
-    <h2 th:text="${'Your email: ' + email}"></h2>
-    <!--<hr>
-    <h2 th:text="${#authentication.name}"></h2>
-    <div sec:authorize="isAuthenticated()">
-        Logged user: <b><span sec:authentication="name"></span></b> |
-        Roles: <b><span sec:authentication="principal.authorities"></span></b>
-    </div>-->
-
-    <form class="form-signin" th:action="@{/logout}" method="post">
-        <input class="btn btn-lg btn-primary btn-block" type="submit" value="LOGOUT"/>
-    </form>
+    <h2 class="form-signin-heading">Custom Login with OAuth 2.0</h2><table class="table table-striped">
+    <tr><td><a href="/oauth2/authorization/github">GitHub</a></td></tr>
+    <tr><td><a href="/oauth2/authorization/facebook">Facebook</a></td></tr>
+    <tr><td><a href="/oauth2/authorization/google">Google</a></td></tr>
+</table>
 </div>
-</body>
-</html>
+</body></html>
